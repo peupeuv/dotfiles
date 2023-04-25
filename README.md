@@ -6,29 +6,32 @@ This repository contains my personal configuration files, scripts, and settings 
 
 1. Clone the repository to your home directory:
 
-  git clone https://github.com/peupeuv/dotfiles.git ~/dotfiles
+    git clone https://github.com/peupeuv/dotfiles.git ~/dotfiles
 
 2. Create symbolic links for the configuration files:
 
-  ln -s ~/dotfiles/starship.toml ~/.config/starship.toml
+ <pre>
+    ln -s ~/dotfiles/starship.toml ~/.config/starship.toml
 
-  ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
+    ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
 
-  ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
-
-  Repeat this process for other configuration files as needed.
+    ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
+ </pre>
+    Repeat this process for other configuration files as needed.
 
 3. Install and configure the tools (Starship, Vim, Tmux, etc.) using your preferred method (manual installation, package manager, or an automation tool like Ansible).
+    
+    For ansible goto my ansible-playbooks repo:  (https://github.com/peupeuv/ansible-playbooks).
 
-4. Restart your shell or reload the configuration files for the changes to take effect.
+5. Restart your shell or reload the configuration files for the changes to take effect.
 
 ## Updating
 
 To update the dotfiles, pull the latest changes from the repository and re-run the installation steps:
 
-cd ~/dotfiles
+    cd ~/dotfiles
 
-git pull
+    git pull
 
 ## Customization
 
