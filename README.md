@@ -11,13 +11,16 @@ This repository contains my personal configuration files, scripts, and settings 
 2. Create symbolic links for the configuration files:
 
  <pre>
+ 
     ln -s ~/dotfiles/starship.toml ~/.config/starship.toml
 
     ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
 
     ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
+ 
  </pre>
-    Repeat this process for other configuration files as needed.
+ 
+  Repeat this process for other configuration files as needed.
 
 3. Install and configure the tools (Starship, Vim, Tmux, etc.) using your preferred method (manual installation, package manager, or an automation tool like Ansible).
     
