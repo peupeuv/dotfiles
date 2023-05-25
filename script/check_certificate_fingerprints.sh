@@ -1,6 +1,6 @@
 #!/bin/bash
 
-search_path="/etc"
+default_search_path="${1:-/etc}"
 sha256_fingerprint="MY_FGP"
 pin_sha256="MY_PIN"
 
@@ -9,10 +9,10 @@ GREEN='\033[0;32m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-echo -e "Searching for .crt and .pem files under ${GREEN}$search_path${NC}..."
+echo -e "Searching for .crt and .pem files under ${GREEN}$default_search_path${NC}..."
 
 # Find .crt and .pem files under the specified search path
-cert_files=$(find "$search_path" -type f \( -name "*.crt" -o -name "*.pem" \))
+cert_files=$(find "$default_search_path" -type f \( -name "*.crt" -o -name "*.pem" \))
 
 # Flag to track if any matches are found
 found_matches=0
