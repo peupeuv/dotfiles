@@ -1,0 +1,1 @@
+Import-Csv -Path ".\wimpay.csv" -Delimiter ';' | Group-Object code_antenne | ForEach-Object { $fileName = ".\" + $_.Name + "-file.csv"; $_.Group | Select-Object * -ExcludeProperty code_antenne | ConvertTo-Csv -NoTypeInformation -Delimiter ';' | Select-Object -Skip 1 | ForEach-Object { $_ -replace '"', '' } | ForEach-Object { $_ -replace '/', '-' } | Set-Content -Path $fileName }
