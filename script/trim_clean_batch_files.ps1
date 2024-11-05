@@ -13,7 +13,7 @@ foreach ($file in $files) {
     $cleanedBaseName = ($file.BaseName -replace '[^a-zA-Z]', '').Trim().ToUpper()
     
     # Construct the new filename with the date
-    $newFileName = $currentDate + "_" + $cleanedBaseName + $file.Extension
+    $newFileName = $cleanedBaseName + "_" + $currentDate + $file.Extension
 
     # Construct the new file path
     $newFilePath = Join-Path -Path $folderPath -ChildPath $newFileName
